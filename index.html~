@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Deep Clone Demo</title>
+  <style>
+    #output {
+      white-space: pre-wrap;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #f9f9f9;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+<h1>JS Deep Clone Demo</h1>
+<textarea id="input" placeholder="Paste your JavaScript object here"></textarea>
+<button onclick="cloneObject()">Clone Object</button>
+<h2>Cloned Object:</h2>
+<div id="output"></div>
+
+<script type="module">
+  import { deepClone } from './src/deepClone.js';
+
+  // Define the function and attach it to the global window object
+  window.cloneObject = function() {
+    const inputField = document.getElementById('input');
+    const outputField = document.getElementById('output');
+
+    try {
+      // Parse the JSON-like object from textarea
+      const inputObject = eval('(' + inputField.value + ')');
+      const clonedObject = deepClone(inputObject);
+
+      // Display the cloned object as a string
+      outputField.textContent = JSON.stringify(clonedObject, null, 2);
+    } catch (error) {
+      outputField.textContent = 'Error: ' + error.message;
+    }
+  };
+</script>
+</body>
+</html>
