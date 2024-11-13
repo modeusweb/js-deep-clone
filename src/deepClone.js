@@ -1,5 +1,5 @@
 /**
- * Function to deeply clone an object or array, supporting classes and Date objects.
+ * Function to deeply clone an object or array, supporting Date objects.
  * Handles circular references to avoid infinite recursion.
  * @param {Object|Array} input - The object or array to clone.
  * @param {WeakMap} [map=new WeakMap()] - WeakMap to track circular references.
