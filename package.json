@@ -1,7 +1,7 @@
 {
   "name": "js-deep-clone",
   "version": "1.0.0",
-  "description": "A JavaScript module for deep cloning objects and arrays, with support for classes and dates, while handling circular references.",
+  "description": "A JavaScript module for deep cloning objects and arrays, with support for dates, while handling circular references.",
   "main": "deepClone.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,6 @@
     "clone",
     "object",
     "array",
-    "class",
     "date",
     "circular"
   ]

@@ -1,11 +1,11 @@
 # Deep Clone Utility
 
-Deep Clone Utility is a JavaScript function that performs a deep cloning of an object or array, supporting classes and Date objects. It handles circular references to avoid infinite recursion.
+Deep Clone Utility is a JavaScript function that performs a deep cloning of an object or array, supporting Date objects. It handles circular references to avoid infinite recursion.
 
 ## Features
 
 - **Deep Cloning**: Recursively clones all nested objects and arrays.
-- **Support for Special Data Types**: Handles `Date` objects and custom classes, ensuring accurate type preservation.
+- **Support for Special Data Types**: Handles `Date` objects, ensuring accurate type preservation.
 - **Circular Reference Handling**: Prevents infinite recursion by tracking circular references with `WeakMap`.
 
 ## Usage
@@ -61,7 +61,6 @@ The deepClone function handles cloning as follows:
 1. If the input is a primitive type or a function, it returns the same value.
 2. If the input is an object or array, it creates a new object or array, respectively.
 3. If the input is a Date object, it creates a new Date object with the same value.
-4. If the input is a class, it creates a new instance of the class with the same properties.
 5. If the input is an object or array, it clones its properties recursively.
 6. If the input is a circular reference, it returns the same object.
 
