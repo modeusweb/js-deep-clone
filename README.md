@@ -8,6 +8,12 @@ Deep Clone Utility is a JavaScript function that performs a deep cloning of an o
 - **Support for Special Data Types**: Handles `Date` objects, ensuring accurate type preservation.
 - **Circular Reference Handling**: Prevents infinite recursion by tracking circular references with `WeakMap`.
 
+## Installation
+
+```bash
+npm install js-deep-clone
+```
+
 ## Usage
 
 ### Importing the Function
@@ -15,7 +21,7 @@ Deep Clone Utility is a JavaScript function that performs a deep cloning of an o
 To use the `deepClone` function, you can import it from the file where it is defined:
 
 ```javascript
-import { deepClone } from './path/to/deepClone.js';
+import { deepClone } from 'js-deep-clone';
 ```
 
 ### Function Signature
@@ -34,7 +40,7 @@ The function returns a deeply cloned copy of the `input` object or array.
 ## Example
 
 ```javascript
-import { deepClone } from './deepClone';
+import { deepClone } from 'js-deep-clone';
 
 const original = {
   name: "Alice",
